@@ -16,8 +16,8 @@ const TodoController = () => {
     // TODO: 투두 리스트 삭제
     // NOTE: filter 메서드를 사용하여 삭제할 아이템을 제외한 나머지 아이템만 반환 후 setTodos로 업데이트
     // HINT: `id`와 `todo.id`가 일치하지 않는 아이템만 반환
-    const remainTodo = todos.filter((todo) => todo.id !== id);
-    setTodos(remainTodo);
+    const remainTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(remainTodos);
   };
 
   const onToggleTodoItem = (id) => {
@@ -25,14 +25,14 @@ const TodoController = () => {
     // TODO: 투두 리스트 completed(완료) 상태를 토글
     // NOTE: map 메서드를 사용하여 특정 아이템의 completed 상태를 토글 후 setTodos로 업데이트
     // HINT: `id`와 `todo.id`가 일치하는 아이템의 completed 상태를 토글
-    const updateTodo = todos.map((todo) => {
+    const updateTodos = todos.map((todo) => {
       if (todo.id === id) {
         return { ...todo, completed: !todo.completed };
       } else {
         return todo;
       }
     });
-    setTodos(updateTodo);
+    setTodos(updateTodos);
   };
 
   const onChangeSortOrder = (e) => {
