@@ -1,5 +1,10 @@
+import { useContext } from "react";
+import { TodoContext } from "../../context/TodoContext";
+
 // uncontrolled component
-const TodoForm = ({ onSubmitTodo }) => {
+const TodoForm = () => {
+  const { onSubmitTodo } = useContext(TodoContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
