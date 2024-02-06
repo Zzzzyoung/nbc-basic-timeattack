@@ -46,6 +46,10 @@ const TodoController = () => {
       // TODO: 투두 리스트 오름차순 정렬
       // NOTE: sort 메서드를 사용하여 `limit`을 기준으로 오름차순 정렬 후 setTodos로 업데이트
       // HINT: `new Date(todo.limit)`을 사용하여 정렬
+      const sortedTodos = [...todos].sort((a, b) => {
+        new Date(a.limit) - new Date(b.limit);
+      });
+      setTodos(sortedTodos);
       return;
     }
 
@@ -53,6 +57,10 @@ const TodoController = () => {
     // TODO: 투두 리스트 내림차순 정렬
     // NOTE: sort 메서드를 사용하여 `limit`을 기준으로 내림차순 정렬 후 setTodos로 업데이트
     // HINT: `new Date(todo.limit)`을 사용하여 정렬
+    const sortedTodos = [...todos].sort((a, b) => {
+      new Date(b.limit) - new Date(a.limit);
+    });
+    setTodos(sortedTodos);
   }, [sortOrder]);
 
   const workingTodos = todos.filter((todo) => !todo.completed);
