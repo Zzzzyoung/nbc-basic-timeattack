@@ -11,5 +11,6 @@ export const TodoHeader = styled.header`
 export const TodoCardItem = styled.li`
   padding: 1rem;
   border: 1px solid #000;
-  text-decoration: ${({ completed }) => (completed ? "line-through" : "none")};
+  text-decoration: ${({ $completed }) =>
+    $completed ? "line-through" : "none"};
 `;

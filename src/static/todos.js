@@ -4,14 +4,14 @@ export const defaultTodos = [
     title: "Let's Time Attack!",
     content: "Solve the First Problem!",
     completed: false,
-    limit: "2024-02-06",
+    limit: "2024-02-04",
   },
   {
     id: 2,
     title: "Let's Time Attack!",
     content: "Solve the Second Problem!",
     completed: false,
-    limit: "2024-02-06",
+    limit: "2024-02-05",
   },
   {
     id: 3,

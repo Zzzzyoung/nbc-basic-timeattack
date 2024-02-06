@@ -11,7 +11,7 @@ const TodoItem = ({ todo, onDeleteTodoItem, onToggleTodoItem }) => {
   });
 
   return (
-    <TodoCardItem completed={completed}>
+    <TodoCardItem $completed={completed}>
       <article>
         <h3>{title}</h3>
         <p>{content}</p>
